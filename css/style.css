@@ -168,6 +168,27 @@ a:hover {
     text-decoration: underline;
 }
 
+/* estilo do botão topo */
+.btn-topo {
+    position: fixed;
+    right: 40px;
+    bottom: 110px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.btn-topo img {
+    transition: 0.3s;
+}
+
+.btn-topo img:hover {
+    transform: scale(1.1);
+}
+
 /* FOOTER */
 footer {
     background-color: #1f4f50;
