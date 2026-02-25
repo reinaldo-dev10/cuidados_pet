@@ -117,6 +117,31 @@ thead th {
     color: #ffffff;
 }
 
+/* BOTÃO GALERIA */
+#btn-galeria {
+    background-color: #2c7a7b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Efeito hover */
+#btn-galeria:hover {
+    background-color: #225e5f;
+    transform: scale(1.05);
+}
+
+/* Efeito ao clicar */
+#btn-galeria:active {
+    transform: scale(0.98);
+}
+
 .grade{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    
