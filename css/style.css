@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */  
+/* HEADER */   
 header {
     background-color: #2c7a7b;
     color: #ffffff;
@@ -131,7 +131,6 @@ thead th {
     box-shadow: rgba(0, 0, 0, 0.32) 0px 5px 15px;
 }
 
-
 /* LINKS */
 a {
     color: #2c7a7b;
@@ -159,7 +158,6 @@ footer p {
     font-size: 0.9rem;
     text-align: center;
 }
-
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
