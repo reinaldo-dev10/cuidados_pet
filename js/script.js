@@ -16,5 +16,15 @@ document.getElementById("btn-galeria").addEventListener("click", () => {
         img.alt = "Imagem da galeria";
         galeria.appendChild(img);
     });
-
 });
+
+// Captura o ano atual para o Copyright
+const ano = new Date().getFullYear();
+document.getElementById('ano-atual').textContent = ano;
+
+// Captura e formata a data de hoje para a "Última atualização"
+const hoje = new Date();
+const opcoes = { year: 'numeric', month: 'long', day: 'numeric' };
+const dataFormatada = hoje.toLocaleDateString('pt-BR', opcoes);
+
+document.getElementById('data-completa').textContent = dataFormatada;
