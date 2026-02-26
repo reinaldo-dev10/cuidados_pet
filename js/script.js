@@ -43,12 +43,6 @@ document.getElementById("campo-filtro").addEventListener("input", (e) => {
      });
 });
 
-
-
-
-
-
-
 // Captura o ano atual para o Copyright
 const ano = new Date().getFullYear();
 document.getElementById('ano-atual').textContent = ano;

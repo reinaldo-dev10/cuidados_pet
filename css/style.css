@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} 
 
 /* CONFIGURAÇÕES GERAIS */
 body {
@@ -38,22 +38,35 @@ nav {
 
 nav ul {
     list-style: none;
+    font-weight: bold;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    justify-content: space-around;
+    margin-top: 40px;
+    text-align: center;
+    width: 60vw;
+    margin-left: 19%;
+    margin-right: auto;
+	font-size: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
+	text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+	font-size: 20px;
 }
 
 nav ul li a:hover {
     background-color: #225e5f;
+	font-weight:bold;
+	border-radius: 100px;
+	padding: 9px 14px;
+	font-size: 20px;
 }
 
 /* CONTEÚDO PRINCIPAL */
@@ -151,12 +164,60 @@ thead th {
 
 .grade img {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;     
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 .grade img:hover {
-     box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+	transform: scale(1.03);
+	box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+
+
+/* ESTILIZAÇÃO DA SEÇÃO DE PESQUISA */
+.pesquisa {
+    background-color: #e2e8f0; /* Tom de cinza azulado suave para destaque */
+    border: 2px solid #2c7a7b;
+    text-align: center;
+}
+
+#campo-filtro {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 25px; /* Bordas arredondadas para um visual moderno */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#campo-filtro:focus {
+    border-color: #2c7a7b; /* Muda a cor ao clicar para digitar */
+    box-shadow: 0 0 8px rgba(44, 122, 123, 0.2);
+}
+
+#resultado {
+    list-style: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resultado li {
+    background: #fff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #2c7a7b;
+    font-weight: bold;
 }
 
 /* LINKS */
@@ -217,19 +278,85 @@ footer p {
     nav ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        gap: 12px;
+    }
+
+    nav ul li {
+        width: 90%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
     }
 
     table, thead, tbody, th, td, tr {
         font-size: 0.9rem;
     }
+	/* Ajuste para o botão de topo em telas menores */
+    .btn-topo {
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn-topo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Garante que o conteúdo principal ocupe mais espaço em telas pequenas */
+    main {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+
+    /* Melhora a visualização da tabela em celulares (scroll horizontal) */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 
     .grade {
-    grid-template-columns: repeat(2, 1fr); /* 2 por linha no tablet */
+    grid-template-columns: repeat(1, 1fr); /* 2 por linha no tablet */
     }
 }
 
 @media (max-width: 480px) {
-    .grade {
-        grid-template-columns: 1fr; /* 1 por linha */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Ajuste fino nos paddings das seções para ganhar espaço */
+    section {
+        padding: 15px;
+    }
+
+    #campo-filtro {
+        width: 90%;
+    }
+	
+	.grade {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr); /* Uma única fração da largura */
+        gap: 20px;
+    }
+
+    .grade img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Garante que o menu de navegação se ajuste corretamente no celular */
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        gap: 10px;
     }
 }
